@@ -147,7 +147,7 @@ a {
   width: max-content;
 }
 #faq summary {
-    font-weight: 500;
+  font-weight: 500;
 }
 footer {
   margin-top: 36px;
@@ -221,3 +221,45 @@ footer {
   background: #f0f9ff;
   font-size: 14px;
 }
+
+/* Financial Table Styles */
+
+.financials {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.financials thead {
+  background: #f9fafb;
+  font-weight: 600;
+}
+
+.financials th,
+.financials td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.financials tbody tr:nth-child(even) {
+  background: #fdfdfd;
+}
+
+.financials tbody tr:hover {
+  background: #f0f9ff;
+}
+
+.disclaimer {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+/* Responsive Design */
