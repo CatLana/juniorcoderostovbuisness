@@ -222,6 +222,10 @@ footer {
   font-size: 14px;
 }
 
+.hidden-financial-table {
+  display: none !important;
+}
+
 /* Financial Table Styles */
 
 .financials {
