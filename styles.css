@@ -30,12 +30,41 @@ a {
   max-width: 1080px;
   margin-inline: auto;
   padding: 24px;
+  width: 100%;
+  box-sizing: border-box;
 }
+
+/* Tag badge styling */
+.tag {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #e0f2fe;
+  color: #2563eb;
+  border: 1px solid #60a5fa;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  vertical-align: middle;
+  box-shadow: 0 1px 3px rgba(59, 130, 246, 0.06);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px 8px 10px 8px;
+    width: 100vw;
+    min-width: 0;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+}
+
 .hero {
   display: grid;
   gap: 18px;
   align-items: center;
-  padding: 48px 0 24px 0;
+  padding: 16px 0 24px 0;
 }
 .badge {
   display: inline-flex;
@@ -94,7 +123,20 @@ a {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+  box-sizing: border-box;
 }
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .card {
   grid-column: span 12;
   background: var(--card);
@@ -102,7 +144,21 @@ a {
   border-radius: 16px;
   padding: 24px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  box-sizing: border-box;
 }
+
+@media (max-width: 600px) {
+  .card {
+    padding: 12px 8px;
+    border-radius: 10px;
+    margin: 0;
+    width: 100vw;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+}
+
 @media (min-width: 768px) {
   .card.span-6 {
     grid-column: span 6;
@@ -140,7 +196,7 @@ a {
   color: #374151;
 }
 .section-title {
-  margin: 28px 0 12px 0;
+  margin: 12px 0 12px 0;
   font-size: 22px;
   font-weight: 700;
   color: #111827;
@@ -171,16 +227,12 @@ footer {
   width: 28px;
   height: 28px;
 }
-.tag {
-  display: inline-block;
-  margin-left: 6px;
-  padding: 2px 8px;
-  border-radius: 999px;
-  background: #eff6ff;
-  color: #2563eb;
-  border: 1px solid #bfdbfe;
-  font-size: 12px;
-  font-weight: 500;
+
+@media (max-width: 600px) {
+  .page-inner {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }
 .highlight {
   color: #2563eb;
@@ -235,9 +287,41 @@ footer {
   font-size: 0.95rem;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
-  overflow: hidden;
+  overflow: auto;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  min-width: 320px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .financials {
+    display: block;
+    width: 100vw;
+    min-width: 0;
+    max-width: 100vw;
+    overflow-x: auto;
+    font-size: 0.89rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .financials thead,
+  .financials tbody,
+  .financials tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  .financials th,
+  .financials td {
+    padding: 0.5rem 0.3rem;
+    font-size: 0.89rem;
+    word-break: break-word;
+  }
 }
 
 .financials thead {
